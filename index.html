@@ -16,10 +16,10 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/adaptivetracking">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/adaptivetracking/AdaptiveTracking">View on GitHub</a>
 
           <h1 id="project_title">Adaptive tracking</h1>
-          <h2 id="project_tagline">Fusion of Tracking Techniques to Enhance Adaptive Real-time Tracking of Arbitrary Objects</h2>
+          <h2 id="project_tagline">Fusion of tracking techniques to enhance adaptive real-time tracking of arbitrary objects</h2>
 
         </header>
     </div>
@@ -27,15 +27,44 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to our Page.</h3>
 
-<p>This is the homepage of our IHCI 2014 paper submission <em>Fusion of Tracking Techniques to Enhance Adaptive Real-time Tracking of Arbitrary Objects</em>. </p>
+        <p>This is the homepage of our IHCI 2014 paper <em>Fusion of tracking techniques to enhance adaptive real-time tracking of arbitrary objects</em>.</p>
 
-<p>We are currently making preparations to release our code. Stay tuned for updates on this page!</p>
+        <h3>Code</h3>
 
-<p>Last updated: July 9, 2014</p>
+          <p>You can find the source code of the tracker in <a href="https://github.com/adaptivetracking/AdaptiveTracking">our GitHub repository</a>.</p>
 
+        <h3>Configurations</h3>
+
+          <p>The following <a href="downloads/configs.zip">configurations files</a> are necessary to confirm our benchmark results:</p>
+
+          <ul>
+            <li><strong>bobot.cfg</strong> Image sequences with ground truth (paths may need adjustment)</li>
+            <li><strong>BT.cfg</strong> Baseline tracker</li>
+            <li><strong>OF.cfg</strong> Tracker with optical-flow-based motion model</li>
+            <li><strong>LC.cfg</strong> Tracker with learning condition</li>
+            <li><strong>OF-LC.cfg</strong> Tracker with optical-flow-based motion model and learning condition</li>
+            <li><strong>OF-LC-SW.cfg</strong> Tracker with optical-flow-based motion model, learning condition, and sliding-window-based measurement model</li>
+          </ul>
+
+        <h3>Benchmark results</h3>
+
+          <p>The <a href="downloads/bobot-results.zip">detailled tracking output</a> of the evaluation contains a directory for each tested tracker variation:</p>
+
+          <ul>
+            <li><strong>BT</strong> Baseline tracker</li>
+            <li><strong>OF</strong> Tracker with optical-flow-based motion model</li>
+            <li><strong>LC</strong> Tracker with learning condition</li>
+            <li><strong>OF-LC</strong> Tracker with optical-flow-based motion model and learning condition</li>
+            <li><strong>OF-LC-SW</strong> Tracker with optical-flow-based motion model, learning condition, and sliding-window-based measurement model</li>
+          </ul>
+
+          <p>Insides those directories, there are further directories for each of the BoBoT image sequences. Within those, there are the following files:</p>
+
+          <ul>
+            <li><strong>run#</strong> Tracking output (in BoBoT format) of run # (0-19)</li>
+            <li><strong>overlap#</strong> Overlap ratios of run # (0-19)</li>
+          </ul>
 
       </section>
     </div>
@@ -43,7 +72,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a>, last update on October 08, 2014</p>
       </footer>
     </div>
 
