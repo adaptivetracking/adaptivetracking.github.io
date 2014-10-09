@@ -28,7 +28,13 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-        <p>This is the homepage of our IHCI 2014 paper <em>Fusion of tracking techniques to enhance adaptive real-time tracking of arbitrary objects</em>.</p>
+        <p>This is the homepage of our IHCI 2014 paper <em>"Fusion of tracking techniques to enhance adaptive real-time tracking of arbitrary objects"</em>, which presents an algorithm for tracking arbitrary objects and learning their appearance on-the-fly. The tracking starts with a single annotated frame, where a bounding box around the target is given. The tracking algorithm then computes a new bounding box around the target for each of the following frames and is able to re-detect it after an occlusion. On this website, you can find the code, configurations, and detailled benchmark results that were reported in the paper.</p>
+
+        <p>To give an example of what the tracking algorithm should be able to do, we show four frames of sequence F of the <a href="http://www.iai.uni-bonn.de/~kleind/tracking/">Bonn Benchmark on Tracking</a>. The blue bounding box is the output of our tracker.</p>
+
+        <p style="text-align: center;"><img src="images/frame0.png" /> <img src="images/frame130.png" /> <img src="images/frame147.png" /> <img src="images/frame156.png" /></p>
+
+        <p><strong>First image:</strong> Tracking is initialized by the ground truth. <strong>Second image:</strong> The algorithm tracks the position of the person. <strong>Third image:</strong> There is no bounding box because the person is not visible anymore. <strong>Fourth image:</strong> The person is re-detected as soon as it becomes visible again.</p>
 
         <h3>Code</h3>
 
@@ -39,7 +45,7 @@
           <p>The following <a href="downloads/configs.zip">configurations files</a> are necessary to confirm our benchmark results:</p>
 
           <ul>
-            <li><strong>bobot.cfg</strong> Image sequences with ground truth (paths may need adjustment)</li>
+            <li><strong>bobot.cfg</strong> Image sequences with ground truth using the <a href="http://www.iai.uni-bonn.de/~kleind/tracking/">BoBoT dataset</a> (paths may need adjustment)</li>
             <li><strong>BT.cfg</strong> Baseline tracker</li>
             <li><strong>OF.cfg</strong> Tracker with optical-flow-based motion model</li>
             <li><strong>LC.cfg</strong> Tracker with learning condition</li>
@@ -49,7 +55,7 @@
 
         <h3>Benchmark results</h3>
 
-          <p>The <a href="downloads/bobot-results.zip">detailled tracking output</a> of the evaluation contains a directory for each tested tracker variation:</p>
+          <p>The <a href="downloads/bobot-results.zip">detailed tracking output</a> of the evaluation contains a directory for each tested tracker variation:</p>
 
           <ul>
             <li><strong>BT</strong> Baseline tracker</li>
