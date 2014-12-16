@@ -72,6 +72,19 @@
             <li><strong>overlap#</strong> Overlap ratios of run # (0-19)</li>
           </ul>
 
+        <h3>Limitations</h3>
+
+          <p>The tracking algorithm is far from perfect and has its limitations. For example, the used linear SVM and HOG features capture the shape of the target and therefore allow tracking under out-of-plane rotations (as long as the contour does not change as much), but other details, that may be necessary to discriminate the target from similar objects, might get lost. If the shape does change drastically, as is the case with deformations (e.g. a gymnast during performance), the tracking usually fails. Furthermore, the resolution of the image sequences is important, as images below 320x240 pixels may be too small to capture information, while images above might need other HOG parameters (cell size of 8 instead of 5, more cells per target patch) and another minimum target size.</p>
+
+          <p>Further limitations:</p>
+
+          <ul>
+            <li>Sudden appearance changes (especially right in the beginning)</li>
+            <li>Objects similar in appearance to the target</li>
+            <li>Deformations</li>
+            <li>Very low resolution (below 320x240 pixels) or image quality</li>
+          </ul>
+
       </section>
     </div>
 
